@@ -1,0 +1,409 @@
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>موقع Conan Archives للمحقق كونان</title>
+        <style>
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff7eb3, #65a6ff, #ffdd59);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+            body {
+                text-align: center;
+                background: linear-gradient(135deg, #ff7eb3, #65a6ff, #ffdd59, #2ed573, #1e90ff, #f78fb3, #9b5de5, #fa7f72, #57c785, #ff1500, #ff6f61, #6a0dad, #ffdfba);
+                background-size: 300% 300%;
+                animation: gradientBackground 15s infinite ease-in-out;
+                animation-play-state: running; /* الحالة الأولية لتشغيل الحركة */
+                color: #fff;
+                font-family: "Andalus", sans-serif;
+                margin: 0;
+            }
+    
+            @keyframes gradientBackground {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+    
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-bottom: 2px solid #fff;
+            }
+    
+            .header img {
+                width: 100px;
+                height: auto;
+                border-radius: 50%;
+            }
+    
+            .header h1 {
+                font-size: 28px;
+                margin: 0;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            }
+    
+            .clock {
+                font-size: 18px;
+                font-weight: bold;
+                color: #ffdd59;
+            }
+    
+            .video-container {
+                position: relative;
+                width: 300px;
+                margin: 20px auto;
+                border-radius: 15px;
+                overflow: hidden;
+                transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            }
+    
+            .video-container:hover {
+                transform: scale(1.05);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            }
+    
+            .video-container.playing {
+                transform: scale(1.05);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            }
+    
+            .video-container video {
+                width: 100%;
+                height: auto;
+                border: 3px solid #ff0000;
+            }
+    
+            .footer {
+                margin-top: 20px;
+                padding: 10px;
+                background: rgba(0, 0, 0, 0.5);
+                color: #ffffff;
+                font-family: "Andalus", sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .footer img {
+                width: 50px;
+                height: auto;
+                margin-right: 10px;
+                border-radius: 50%;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            }
+    
+            u {
+                display: inline-block;
+                margin-bottom: 10px;
+                font-size: 40px;
+                color: #000000;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+                transition: color 0.3s ease-in-out;
+            }
+    
+            u:hover {
+                color: #ff0000;
+            }
+    
+            .overlay {
+                display: none;
+            }
+
+            /* تخصيص الزر لتشغيل/إيقاف الحركة الخلفية */
+            #stopAnimation {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                padding: 12px 20px;
+                background-color: #ff4500; /* لون مميز للزر */
+                color: #fff;
+                font-size: 16px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease-in-out;
+            }
+
+            #stopAnimation:hover {
+                background-color: #ff6347; /* لون عند التمرير على الزر */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <img src="مشاهدة-المحقق-كونان-الجزء-الخامس-والعشرون-مدبلج-بالعربية.jpg" alt="صورة">
+            <h1>أفلام والجزء 25 من المحقق كونان<br>موقع Conan Archives</h1>
+            <div class="clock" id="clock">00:00:00</div>
+        </div>
+    
+        <!-- جميع الفيديوهات -->
+        <u>فيلم كيتو كيد ضد كونان</u>
+        <div class="video-container">
+            <video controls>
+                <source src="فيلم2024.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+    
+        <u>الرسائل القرميزية</u>
+        <div class="video-container">
+            <video controls>
+                <source src="الرسائل القرميزية.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+    
+        <u>جلاد زيرو</u>
+        <div class="video-container">
+            <video controls>
+                <source src="جلاد زيرو.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+    
+        <u>فيلم ذكريات في مركز الشرطة</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Conan Special Movie AR DUB 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+                
+                
+             
+
+
+        <u>الحلقة 5 من الجزء 8</u>
+        <div class="video-container">
+            <video controls>
+                <source src="05.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+
+
+        <u>الحلقة 37 من الجزء 8</u>
+        <div class="video-container">
+            <video controls>
+                <source src="37.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+
+
+
+        <u>الحلقة 49 من الجزء 10 حلقة مميزةذكريات سينشي الجزء الاول</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S10 EP49 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+
+
+
+        <u>الحلقة 50 من الجزء 10 حلقة مميزة ذكريات سينشي الجزء الثاني</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S10 EP50 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+
+
+
+        <u>الحلقة 983 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S25 EP983 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+    
+        <u>الحلقة 1101 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S25 EP1101 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+        <u>الحلقة 1102 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S25 EP1102 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+
+        <u>الحلقة 1103 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S25 EP1103 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+
+
+        <u>الحلقة 1104 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S25 EP1104 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+
+        <u>الحلقة 1107 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S25 EP1107 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+
+
+        <u>الحلقة 1126 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan EP1126 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+    
+
+        <u>الحلقة 1128 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S25 EP1128 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+
+
+        <u>الحلقة 1129 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan EP24 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+
+       
+
+        <u>الحلقة 1132 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S25 EP1132 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+
+
+        <u>الحلقة 1133 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S25 EP1133 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+
+        <u>الحلقة 1134 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S25 EP1134 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+
+        <u>الحلقة 1135 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S25 EP1135 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+        <u>الحلقة 1136 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S25 EP1136 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+        <u>الحلقة 1137 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S25 EP1137 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+        <u>الحلقة 1138 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S25 EP1138 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+        <u>الحلقة 1139 من الجزء 25</u>
+        <div class="video-container">
+            <video controls>
+                <source src="[SpacePowerFan.com] Detective Conan S25 EP1139 480P.mp4" type="video/mp4">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+
+        <h1>
+            <span style="color: #ff0000;">أفلام</span>
+            <span style="color: #00ff00;">والجزء</span>
+            <span style="color: #0000ff;">25</span>
+            <span style="color: #ffa500;">من</span>
+            <span style="color: #800080;">المحقق</span>
+            <span style="color: #f2ff00;">كونان</span>
+        </h1>
+
+
+    
+        <div class="footer">
+            <img src="2.jpg" alt="صورة">
+            <span>بقلم : Mohammed Ahmed Helmy Aboura</span>
+        </div>
+    
+        <!-- زر تشغيل وإيقاف الحركة الخلفية -->
+        <button id="stopAnimation">إيقاف الخلفية المتحركة</button>
+    
+        <script>
+            document.getElementById('stopAnimation').addEventListener('click', function() {
+                const body = document.querySelector('body');
+                if (body.style.animationPlayState === 'paused') {
+                    body.style.animationPlayState = 'running';
+                    this.textContent = 'إيقاف الخلفية المتحركة';
+                } else {
+                    body.style.animationPlayState = 'paused';
+                    this.textContent = 'تشغيل الخلفية المتحركة';
+                }
+            });
+
+            function updateClock() {
+                const now = new Date();
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const seconds = String(now.getSeconds()).padStart(2, '0');
+                document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+            }
+
+            setInterval(updateClock, 1000); // تحديث الساعة كل ثانية
+        </script>
+    </body>
+</html>
